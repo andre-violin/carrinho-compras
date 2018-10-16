@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #eee;
+}
+.container {
+  margin: 0;
+  font-size: 16px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.cabecalho {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  background: rgb(49, 85, 87);
+  color: #eee;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.formulario {
+  position: fixed;
+  top: 6rem;
+  left: 0;
+  width: 50%;
+  height: calc(100vh - 12rem);
+  background:  rgb(62, 127, 128);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 2rem 0;
+}
+
+.comprar,
+.campos {
+  width: 80%;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  padding: 0 15px;
+  font-size: 1.2em;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+.campos:focus,
+.comprar:hover   {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.comprar {
+  background: rgb(49, 85, 87);
+  color: #eee;
+  cursor: pointer;
+}
+
+.relatorio {
+  margin: 6rem 0 6rem 50%;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.cabecalho-nf,
+.card-item-nf {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  padding: 0 20px;
+  box-sizing: border-box;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.cabecalho-nf p,
+.card-item-nf p {
+  flex-grow: 1;
+}
+
+.cabecalho-nf p:first-child,
+.card-item-nf p:first-child {
+  flex-grow: 4;
+}
+
+.total {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 2em;
+  box-sizing: border-box;
+  padding: 0 20px;
+  background: #fff;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.3);
+}
