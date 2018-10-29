@@ -4,7 +4,7 @@ class NegociacaoController {
     this.dados = []
   }
 
-  adiciona(evento) {
+  adiciona(evento, firestore) {
     evento.preventDefault()
     let inputs = document.querySelectorAll('.campos')
     
@@ -14,10 +14,17 @@ class NegociacaoController {
     const data = inputs[3].value
 
     const negociacao = new Negociacao(descricao, quantidade, valorUnitario, data)
-    
+
+    negociacao.adicionaNoFirestore(firestore)
+
     this.dados.push(negociacao)
 
-    negociacao.mostrarDados()
+
+    negociacao.bancoDeDados()
+
+    negociacao.mostrarTudo()
+
+
 
   }
 }
